@@ -49,12 +49,12 @@ const Carousel = () => {
           <div className="text-overlay-container">
             <div className="text-overlay"> </div>
             <br/><br/>
-            <div className="text-overlay">Band Security Screening.</div> 
+            <div className="text-overlay"> Security Screening.</div> 
 
             {/* Show "Register Today" button only if the user is NOT logged in */}
             {!isLoggedIn && (
               <div className="text-overlay">
-                Protect the Band <br/>
+                <br/><br/>
                 <Link to="/Signup">
                 <br/>
                   <Button variant="primary">Register Today</Button>
