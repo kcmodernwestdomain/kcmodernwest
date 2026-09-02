@@ -1,0 +1,133 @@
+/* Navbar.css */
+
+.navbar {
+  background-color: #ffffff;
+  color: #252323;
+  padding: 3px 0;
+  border-bottom: 2px solid #8f8888; /* Add bottom border */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* Adjust padding as needed */
+  background-color: #fff; /* Adjust background color if needed */
+  border-bottom: 2px solid #8f8888; /* Add bottom border */
+}
+
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between; /* Align items to the ends */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+
+.navbar-item {
+  margin-right: 20px;
+}
+
+.navbar-link {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-toggle {
+  font-size: 2rem; /* Increase icon size */
+  cursor: pointer;
+  margin-right: 10px; /* Adjust margin-right as needed */
+  display: none;
+}
+
+/* Change toggle icon when menu is open */
+.navbar-menu.show ~ .navbar-toggle {
+  transform: rotate(90deg); /* Rotate icon */
+}
+
+/* Float the image to the right */
+.navbar-logo-img {
+  margin-top: 5px; /* Adjust margin-top as needed */
+  width: 60%;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+    float: left !important;
+  }
+
+  .navbar-menu {
+    margin-top: 10px;
+    display: none; /* Initially hide the menu items */
+    z-index: 1;
+  }
+
+  .navbar-item {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .navbar-toggle {
+    font-size: 1rem; /* Increase icon size */
+    cursor: pointer;
+    margin-left: auto; /* Move toggle icon to the right */
+    display: flex;
+    align-items: center; /* Align icon with logo */
+    top: 100px;
+  }
+
+  .navbar-link {
+    padding: 10px;
+    border-bottom: 1px solid #fff;
+    color: #ffffff; /* Set color to white */
+  }
+
+  /* Show the menu items when the toggle icon is clicked */
+  .navbar-menu.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #3498db;
+    padding: 10px;
+    padding-left: 20px; /* Add padding to the left */
+  }
+
+  /* Redirect to home page when HOME link is clicked */
+  .navbar-menu.show .navbar-link:nth-child(1) {
+    cursor: pointer;
+  }
+  .navbar-toggle {
+    font-size: 1rem; /* Increase icon size */
+    cursor: pointer;
+    margin-left: 150px; /* Float toggle icon to the right */
+  }
+
+  .navbar-logo-img {
+    margin-top: -70px; /* Move the image up in mobile view */
+    margin-bottom: 10px;
+  }
+  
+}

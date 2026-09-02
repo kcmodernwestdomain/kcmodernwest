@@ -1,0 +1,89 @@
+/* Headercarousel.css */
+
+.carousel-image {
+  width: 70%;
+}
+
+.slick-prev,
+.slick-next {
+  font-size: 0;
+  color: transparent;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  z-index: 1;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  content: '';
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  color: #ccc;
+}
+
+.slick-prev {
+  left: 10px;
+}
+
+.slick-next {
+  right: 10px;
+}
+
+#Landmines {
+  font-size: 45px;
+  font-weight: bold;
+  background-color: black;
+}
+
+.carousel-item .text-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 55px;
+  font-style: unset;
+}
+
+.text-overlay-container {
+  position: absolute;
+  left: 73%;
+  top: 30%;
+  display: flex;
+  flex-direction: column;
+  color: rgb(76, 62, 62);
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+  .carousel-image {
+    height: 300px !important;
+    width: 100%;
+  }
+
+  .text-overlay-container {
+    font-size: 2rem;
+    position: absolute;
+    left: 5%;
+    top: 20%;
+    display: flex;
+    flex-direction: column;
+    color: white; /* ← changed to white */
+    font-weight: bold;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .carousel-image {
+    height: 300px !important;
+  }
+
+  .text-overlay-container {
+    font-size: 1.5rem;
+    color: white; /* ← changed to white */
+  }
+}
