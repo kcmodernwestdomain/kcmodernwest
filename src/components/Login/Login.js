@@ -28,7 +28,7 @@ const Login = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('https://info.kcmodernwest.com/auth/login/', {
+      const response = await fetch('https://membership-prv9.onrender.com/auth/login/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

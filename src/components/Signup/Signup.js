@@ -46,7 +46,7 @@ const SignupForm = () => {
 
     setIsLoading(true);
     try {
-      const response = await axios.post('https://kcmodernwest.com/auth/signup/', user, {
+      const response = await axios.post('https://membership-prv9.onrender.com/auth/signup/', user, {
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json',
